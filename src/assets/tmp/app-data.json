@@ -1,0 +1,58 @@
+{
+  "app": {
+    "name": "Alain",
+    "description": "Ng-zorro admin panel front-end framework"
+  },
+  "user": {
+    "name": "Admin",
+    "avatar": "./assets/tmp/img/avatar.jpg",
+    "email": "cipchk@qq.com"
+  },
+  "menu": [
+    {
+      "text": "主导航",
+      "i18n": "main_navigation",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "children": [
+        {
+          "text": "仪表盘",
+          "i18n": "dashboard",
+          "icon": "anticon antanticon anticon-dashboard",
+          "children": [
+            {
+              "text": "仪表盘V1",
+              "link": "/dashboard/v1",
+              "i18n": "dashboard_v1"
+            },
+            {
+              "text": "post-list",
+              "link": "/post-list",
+              "i18n": "dashboard_v1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "demo",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "children": [
+        {
+          "text": "trade",
+          "i18n": "style",
+          "icon": "anticon anticon-info",
+          "children": [
+            {
+              "text": "list",
+              "link": "/trade/list",
+              "i18n": "typography",
+              "shortcut": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

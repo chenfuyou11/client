@@ -1,0 +1,54 @@
+<page-header [title]="'查询表格'"></page-header>
+
+<nz-card [nzBordered]="false">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="load()" class="search__form">
+    <nz-row [nzGutter]="{ md: 8, lg: 24, xl: 48 }">
+      <nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="no">title</nz-form-label>
+          <nz-form-control>
+            <input nz-input  name="no"  (keyup)="searchKeyUp.next($event)"  [(ngModel)]="postParameter.title"  placeholder="请输入" id="no">
+          </nz-form-control>
+        </nz-form-item>
+      </nz-col>
+      <nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" >查询</button>
+
+      </nz-col>
+    </nz-row>
+  </form>
+  <nz-table #ajaxTable nzShowSizeChanger [nzData]="dataSource" [nzTotal]="totalItems" [(nzPageIndex)]="pageNumber" [(nzPageSize)]="pageSize"
+    [nzLoading]="isTableLoading" (nzPageIndexChange)="onPaging()" (nzPageSizeChange)="onPaging()"  [nzFrontPagination]="false">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>author</th>
+        <th>lastModified</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ajaxTable.data">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.author}}</td>
+        <td>{{item.lastModified}}</td>
+        <td>
+            <a (click)="edit(item)">编辑</a>
+            <nz-divider nzType="vertical"></nz-divider>
+            <a (click)="delete(item)">删除</a>
+          </td>
+      </tr>
+    </tbody>
+  </nz-table>
+
+
+</nz-card>
+
+
+
+
+
+
+

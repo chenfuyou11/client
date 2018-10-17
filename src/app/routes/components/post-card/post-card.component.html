@@ -1,0 +1,32 @@
+
+      <nz-card _ngcontent-c9="" nztitle="Card title" style="width:300px;" _nghost-c14="" class="ant-card ant-card-bordered">
+        <!---->
+        <!---->
+        <!---->
+        <div _ngcontent-c14="" class="ant-card-head ng-star-inserted">
+          <div _ngcontent-c14="" class="ant-card-head-wrapper">
+            <!---->
+            <div _ngcontent-c14="" class="ant-card-head-title ng-star-inserted"    >
+              <!---->
+              <!---->{{post.title}}
+            </div>
+            <!---->
+            <div _ngcontent-c14="" class="ant-card-extra ng-star-inserted">
+              <!---->
+              <!----><a _ngcontent-c9="" class="ng-star-inserted" [routerLink]="['/post-detail', post.id]" >More</a>
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <!---->
+        <div _ngcontent-c14="" class="ant-card-body">
+          <!---->
+          <!---->
+          <p _ngcontent-c9="" class="ng-star-inserted">{{post.updateTime | date: 'medium'}} by {{post.author}}</p>
+
+          <!---->
+          <!---->
+        </div>
+        <!---->
+      </nz-card>

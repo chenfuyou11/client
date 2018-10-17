@@ -1,0 +1,7 @@
+<page-header [title]="'详情'"></page-header>
+<nz-card [nzHoverable]="true" [nzBordered]="false">
+  <sv-container size="large" title="{{post.title}}">
+    <sv label="">Posted @ {{post.author}} By {{post.lastModified | date: 'medium'}}</sv>
+
+  </sv-container>
+</nz-card>
